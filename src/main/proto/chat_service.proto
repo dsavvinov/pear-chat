@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "net";
+
+service ChatService {
+    rpc SendMessage(Message) returns (Response) {}
+}
+
+message Message {
+    string text = 1;
+    string nick = 2;
+    string address = 3;
+}
+
+message Response {
+
+}
